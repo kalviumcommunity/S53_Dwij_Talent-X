@@ -1,0 +1,28 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend server for Talent Forge platform",
+  "main": "Server.js",
+  "engines": {
+    "node": "18.x"
+  },
+  "scripts": {
+    "start": "node Server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "backend",
+    "server",
+    "Talent Forge"
+  ],
+  "author": "Dwij Jindal",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3",
+    "mongoose": "^6.2.2",
+    "jsonwebtoken": "^8.5.1",
+    "bcryptjs": "^2.4.3"
+  }
+}
