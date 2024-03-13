@@ -2,7 +2,7 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "Backend server for Talent Forge platform",
-  "main": "Server.js",
+  "main": "index.js",
   "engines": {
     "node": "18.x"
   },
