@@ -8,18 +8,21 @@ require("dotenv").config();
 app.use(express.json());
 app.use(cors());
 
+
+
 async function main() {
-  await mongoose.connect(process.env.MONGO_LINK);
+  try{
+    await mongoose.connect(process.env.MONGO_LINK);
+    console.log("Connected to the database");
+  } catch (err) {
+    console.log(err);
+    process.exit(1);
+  }
 }
+main()
 
 app.get("/", (req, res) => {
-  main()
-    .then(() => {
       res.send("Welcome to the server");
-    })
-    .catch((err) => {
-      console.log(err);
-    });
 });
 
 app.listen(port, () => {
