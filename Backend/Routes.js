@@ -16,12 +16,7 @@ require("dotenv").config();
 // main();
 
 UserRouter.get("/", async (req, res) => {
-  let users;
-  await User.find().then((data) => {
-    users = data;
-  });
-  console.log(users);
-  res.send(users);
+res.send("Ready to fetch all the data from the database")
 });
 
 UserRouter.post("/", async (req, res) => {
