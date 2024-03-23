@@ -16,7 +16,16 @@ require("dotenv").config();
 // main();
 
 UserRouter.get("/", async (req, res) => {
-res.send("Ready to fetch all the data from the database")
+  let result;
+  try {
+    result = await User.find();
+    res.send(result);
+  }
+  catch(err){
+    console.log(err);
+    res.status(500).send("Internal Server Error");
+  }
+
 });
 
 UserRouter.post("/", async (req, res) => {
