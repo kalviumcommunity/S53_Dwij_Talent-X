@@ -28,12 +28,13 @@ UserRouter.get("/", async (req, res) => {
 });
 
 UserRouter.post("/", async (req, res) => {
-  let newPost = new User(req.body)
-  newPost.save().then(()=>{
-    res.send("Data added successfully")
-  }).catch((err)=>{
+  try {
+    let newUser = new User(req.body);
+    await newUser.save();
+    res.send("Data added successfully");
+  } catch (err) {
     res.status(500).send("Internal Server Error");
-  })
+  }
 });
 
 UserRouter.put("/", async (req, res) => {
