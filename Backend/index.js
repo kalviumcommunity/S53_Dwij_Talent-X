@@ -15,7 +15,7 @@ async function main() {
     await mongoose.connect(process.env.MONGO_LINK);
     console.log("Connected to the database");
   } catch (err) {
-    console.log(err);
+    console.log(err);m  
     process.exit(1);
   }
 }

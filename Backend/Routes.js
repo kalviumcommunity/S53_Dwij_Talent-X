@@ -22,14 +22,18 @@ UserRouter.get("/", async (req, res) => {
     res.send(result);
   }
   catch(err){
-    console.log(err);
     res.status(500).send("Internal Server Error");
   }
 
 });
 
 UserRouter.post("/", async (req, res) => {
-  res.send("Ready to add data inside the database");
+  let newPost = new User(req.body)
+  newPost.save().then(()=>{
+    res.send("Data added successfully")
+  }).catch((err)=>{
+    res.status(500).send("Internal Server Error");
+  })
 });
 
 UserRouter.put("/", async (req, res) => {
