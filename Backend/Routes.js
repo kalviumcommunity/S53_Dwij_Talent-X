@@ -20,11 +20,9 @@ UserRouter.get("/", async (req, res) => {
   try {
     result = await User.find();
     res.send(result);
-  }
-  catch(err){
+  } catch (err) {
     res.status(500).send("Internal Server Error");
   }
-
 });
 
 UserRouter.post("/", async (req, res) => {
@@ -42,7 +40,13 @@ UserRouter.put("/", async (req, res) => {
 });
 
 UserRouter.delete("/", async (req, res) => {
-  res.send("Ready to delete data from the database");
+  try {
+    let deleteUser = req.body.name;
+    await User.deleteOne({ name: deleteUser });
+    res.send("Data deleted successfully");
+  } catch (err) {
+    res.status(500).send("Internal Server Error");
+  }
 });
 
 module.exports = UserRouter;
