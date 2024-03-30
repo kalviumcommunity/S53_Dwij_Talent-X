@@ -2,6 +2,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 const User = require("./models/Users");
 const UserRouter = express.Router();
+const Post = require("./models/Post");
+const PostRouter = express.Router();
 require("dotenv").config();
 
 // async function main() {
@@ -49,4 +51,4 @@ UserRouter.delete("/", async (req, res) => {
   }
 });
 
-module.exports = UserRouter;
+module.exports = { UserRouter, PostRouter };
