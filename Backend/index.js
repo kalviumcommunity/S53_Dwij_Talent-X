@@ -5,6 +5,7 @@ const cors = require("cors");
 const port = 6996;
 const Users = require("./models/Users");
 const UserRouter = require("./Routes");
+const PostRouter = require("./Routes")
 
 require("dotenv").config();
 app.use(express.json());
@@ -76,6 +77,7 @@ app.get("/", (req, res) => {
   res.send("Welcome to the server");
 });
 app.use("/users", UserRouter);
+app.use("/post", PostRouter);
 
 app.listen(port, () => {
   console.log(`App is listening at ${port}`);
