@@ -5,8 +5,6 @@ const UserRouter = express.Router();
 const Post = require("./models/Post");
 const PostRouter = express.Router();
 require("dotenv").config();
-PostRouter.use(express.json());
-UserRouter.use(express.json());
 
 // async function main() {
 //   try {

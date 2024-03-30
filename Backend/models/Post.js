@@ -14,12 +14,14 @@ const Post = mongoose.model("post", {
   },
   likes: {
     type: Number,
+    default:0
   },
   description: {
     type: String,    
   },
   comments: {
     type: Number,
+    default:0
   },
   category: {
     type: String,
