@@ -1,22 +1,6 @@
 const express = require("express");
-const mongoose = require("mongoose");
-const User = require("./models/Users");
+const User = require("../models/Users");
 const UserRouter = express.Router();
-const Post = require("./models/Post");
-const PostRouter = express.Router();
-require("dotenv").config();
-
-// async function main() {
-//   try {
-//     await mongoose.connect(process.env.MONGO_LINK);
-//     console.log("Connected to the database");
-//   } catch (err) {
-//     console.log(err);
-//     process.exit(1);
-//   }
-// }
-// main();
-
 UserRouter.get("/", async (req, res) => {
   let result;
   try {
@@ -51,4 +35,4 @@ UserRouter.delete("/", async (req, res) => {
   }
 });
 
-module.exports = { UserRouter, PostRouter };
+module.exports = UserRouter ;

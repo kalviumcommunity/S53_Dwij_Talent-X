@@ -4,8 +4,8 @@ const app = express();
 const cors = require("cors");
 const port = 6996;
 const Users = require("./models/Users");
-const UserRouter = require("./Routes");
-const PostRouter = require("./Routes")
+const UserRouter = require("./Routes/Routes");
+const PostRouter = require("./Routes/PostRoutes");
 
 require("dotenv").config();
 app.use(express.json());
