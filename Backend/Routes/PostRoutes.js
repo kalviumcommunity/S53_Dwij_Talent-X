@@ -13,11 +13,11 @@ PostRouter.get("/", async (req, res) => {
 });
 PostRouter.post("/new", async (req, res) => {
   try {
-    let newPost = new Post(res.body);
+    let newPost = new Post(req.body);
     await newPost.save();
     res.send("Post created successfully");
   } catch (err) {
-    res.status(500).send("Internal Server Error");
+    res.status(500).send(err);
   }
 });
 PostRouter.delete("/delete", async (req, res) => {
