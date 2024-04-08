@@ -6,6 +6,8 @@ const port = 6996;
 const Users = require("./models/Users");
 const UserRouter = require("./Routes/Routes");
 const PostRouter = require("./Routes/PostRoutes");
+const post = require("./init/SamplePost");
+const Post = require("./models/Post");
 
 require("dotenv").config();
 app.use(express.json());
@@ -64,6 +66,14 @@ const data = [
     password: "3456",
   }),
 ];
+
+Post.insertMany(post,(err,res)=>{
+  if(err){
+    console.log(err)
+  }else{
+    console.log(res)
+  }
+})
 
 // Users.insertMany(data, (err, res) => {
 //   if (err) {
