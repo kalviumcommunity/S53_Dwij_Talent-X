@@ -67,13 +67,13 @@ const data = [
   }),
 ];
 
-Post.insertMany(post,(err,res)=>{
-  if(err){
-    console.log(err)
-  }else{
-    console.log(res)
-  }
-})
+// Post.insertMany(post,(err,res)=>{
+//   if(err){
+//     console.log(err)
+//   }else{
+//     console.log(res)
+//   }
+// })
 
 // Users.insertMany(data, (err, res) => {
 //   if (err) {
