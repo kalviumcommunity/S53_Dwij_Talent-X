@@ -28,42 +28,34 @@ const data = [
   new Users({
     name: "John Doe",
     email: "john@example.com",
-    password: "123456",
   }),
   new Users({
     name: "james hardy",
     email: "james@example.com",
-    password: "1456",
   }),
   new Users({
     name: "joe",
     email: "joe@example.com",
-    password: "3456",
   }),
   new Users({
     name: "harvy",
     email: "harvy@example.com",
-    password: "3456",
   }),
   new Users({
     name: "michal",
     email: "michal@example.com",
-    password: "3456",
   }),
   new Users({
     name: "roms",
     email: "roms@example.com",
-    password: "3456",
   }),
   new Users({
     name: "petra",
     email: "petra@example.com",
-    password: "3456",
   }),
   new Users({
     name: "danzi",
     email: "danzi@example.com",
-    password: "3456",
   }),
 ];
 
