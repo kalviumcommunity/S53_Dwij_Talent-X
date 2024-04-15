@@ -13,9 +13,19 @@ UserRouter.get("/", async (req, res) => {
 
 UserRouter.post("/", async (req, res) => {
   try {
-    let newUser = new User(req.body);
-    await newUser.save();
-    res.send("Data added successfully");
+    const { userId, email, name } = req.body;
+    let user = await User.findOne({ userId });
+    if (!user) {
+      user = new User({
+        name: name,
+        email: email,
+        userId: userId,
+      });
+      await user.save();
+      res.status(201).send("User created successfully");
+    } else {
+      res.status(200).send("User already exists");
+    }
   } catch (err) {
     res.status(500).send("Internal Server Error");
   }
@@ -35,4 +45,4 @@ UserRouter.delete("/", async (req, res) => {
   }
 });
 
-module.exports = UserRouter ;
+module.exports = UserRouter;
