@@ -30,6 +30,10 @@ Talent-X leverages the latest in technology to deliver a seamless and immersive 
   
 - *Deployment:* Hosted on Vercel, both frontend and backend components are deployed for optimal performance and accessibility.
 
+## Deployment link
+ - *Backend:* https://talent-x.vercel.app/
+ - *Frontend:* NA
+
 ## Running the Project Locally
 
 Experience the power of Talent Forge firsthand by running the project locally:
