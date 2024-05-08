@@ -1,42 +1,96 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Navbar */
+.navbar {
+  color: white;
+  padding: 1vmax 2vmax;
+  display: flex;
+  justify-content: space-evenly;
+  border-bottom: 0.1px solid #3d3c3c;
+}
+.title {
+  display: flex;
+  align-items: center;
+  font-size: 2vmax;
+  font-weight: 900;
+  max-width: 14vmax;
+}
+.logo img {
+  width: 4.5vmax;
+}
+.routes {
+  display: flex;
+  width: 50%;
+  font-size: 1.2vmax;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.route {
+  cursor: pointer;
+}
+.sign-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 18%;
+}
+.user {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1.5vmax;
+  width: 100%;
+}
+/* Home  */
+.bg-img {
+  /* border: 3px red solid; */
+}
+.img {
+  width: 100%;
+}
+.bg-text {
+  color: white;
+  font-size: 4vmax;
+  max-width: 27vmax;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+.bg {
+  position: relative;
+}
+.add-feature {
+  /* border: 3px solid red; */
+  padding-top: 3vmax;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add-feature-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+/* Post */
+.post-parent {
+  padding: 1vmax 8vmax;
+  border-bottom: 1px solid #3d3c3c;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.explore {
+  font-size: 1.5vmax;
+  display: flex;
+  justify-content: center;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.box {
+  border-color: 2px red solid;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 600px) {
+  .bg-text {
+    font-size: 2vmax;
+    max-width: 15vmax;
   }
-  to {
-    transform: rotate(360deg);
+  .sign-div {
+    width: 30%;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }

@@ -4,7 +4,6 @@ const Home = lazy(() => import("./Home"));
 const LogIn = lazy(() => import("./LogIn"));
 const Post = lazy(() => import("./Post"));
 const Profile = lazy(() => import("./Profile"));
-const SignIn = lazy(() => import("./SignIn"));
 
 export default function AllRoutes() {
   return (
@@ -14,7 +13,6 @@ export default function AllRoutes() {
         <Route path="/login" element={<LogIn />} />
         <Route path="/post" element={<Post />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/signin" element={<SignIn />} />
       </Routes>
     </Suspense>
   );

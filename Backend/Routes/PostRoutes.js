@@ -21,7 +21,7 @@ PostRouter.get("/", async (req, res) => {
     res.status(500).send("Internal Server Error");
   }
 });
-PostRouter.post("/new",validatePost, async (req, res) => {
+PostRouter.post("/new", validatePost, async (req, res) => {
   try {
     let newPost = new Post(req.body);
     await newPost.save();
@@ -39,5 +39,7 @@ PostRouter.delete("/delete", async (req, res) => {
     res.status(500).send("Internal server Error");
   }
 });
+
+
 
 module.exports = PostRouter;
