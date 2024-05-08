@@ -23,11 +23,14 @@
   align-items: center;
   justify-content: space-evenly;
 }
+.route {
+  cursor: pointer;
+}
 .sign-div {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 15%;
+  width: 18%;
 }
 .user {
   display: flex;
@@ -55,20 +58,17 @@
   position: relative;
 }
 .add-feature {
-  border: 3px solid red;
+  /* border: 3px solid red; */
   padding-top: 3vmax;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.add-feature-div{
-  
-}
-.add-feature-img {
-  background-color: #151415;
-  width: 27vmax;
-  border-radius: 28px;
-  height: 19vmax;
+.add-feature-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Post */
@@ -89,5 +89,8 @@
   .bg-text {
     font-size: 2vmax;
     max-width: 15vmax;
+  }
+  .sign-div {
+    width: 30%;
   }
 }

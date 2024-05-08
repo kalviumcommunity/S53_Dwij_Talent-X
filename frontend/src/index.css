@@ -3,9 +3,10 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  transition: all 0.2s;
 }
 body {
-  background-color: black;
+  background-color: black !important;
   color: white;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif !important;
 }

@@ -1,17 +1,17 @@
 import React from "react";
 import "./../App.css";
-import { Grid, GridItem } from "@chakra-ui/react";
+import { Grid, GridItem, Text } from "@chakra-ui/react";
 
 export default function Post() {
   return (
     <div className="post-parent">
-      <div className="explore">Explore</div>
+      <div className="explore">
+        <Text color="white">Explore</Text>
+      </div>
       <div>
         <Grid>
           <GridItem>
-            <div className="box">
-
-            </div>
+            <div className="box"></div>
           </GridItem>
         </Grid>
       </div>

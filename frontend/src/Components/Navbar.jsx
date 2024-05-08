@@ -13,7 +13,9 @@ import {
 } from "@clerk/clerk-react";
 import { Button, ButtonGroup } from "@chakra-ui/react";
 
+
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const { user } = useUser();
@@ -44,17 +46,23 @@ export default function Navbar() {
 
   return (
     <div className="navbar">
+    <Link to={"/"}>
+
       <div className="title">
         <div className="logo">
           <img src={logo} />
         </div>
         <div className="name">TalentX</div>
       </div>
+    </Link>
       <div className="routes">
+      <Link to={"/post"}>
+
         <div className="route">Post</div>
+      </Link>
         <div className="route">FAQ</div>
         <div className="route">About Us</div>
-        <div className="route">Contact Us</div>
+        
       </div>
       <div className="sign-div">
         <SignedOut>
@@ -72,9 +80,8 @@ export default function Navbar() {
             <Button
               backgroundColor="#0171E2"
               border="none"
-              padding="0.5vmax"
               color="white"
-              borderRadius="45px"
+              borderRadius="13px"
               fontSize="1.35vmax"
             >
               SignUp
