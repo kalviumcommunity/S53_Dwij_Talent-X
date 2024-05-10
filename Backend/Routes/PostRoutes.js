@@ -39,6 +39,19 @@ PostRouter.delete("/delete", async (req, res) => {
     res.status(500).send("Internal server Error");
   }
 });
+PostRouter.put("/update/:id", validatePost, async (req, res) => {
+  const {id} = req.params;
+  try {
+    const updatedPost = await Post.findByIdAndUpdate(id, req.body);
+    if (!updatedPost) {
+      res.status(404).send("Post not found");
+    } else {
+      res.send("Post updated successfully");
+    }
+  } catch (err) {
+    res.status(500).send("Internal Server Error");
+  }
+});
 
 
 
