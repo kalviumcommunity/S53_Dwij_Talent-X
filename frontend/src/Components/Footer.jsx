@@ -15,7 +15,6 @@ import {
   Center,
   Button,
 } from "@chakra-ui/react";
-import { ReactNode } from "react";
 import {
   FaGithub,
   FaInstagram,
