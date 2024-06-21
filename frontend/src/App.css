@@ -73,16 +73,28 @@
 
 /* Post */
 .post-parent {
-  padding: 1vmax 8vmax;
-  border-bottom: 1px solid #3d3c3c;
+  padding: 0 1vmax 0 1vmax;
 }
 .explore {
   font-size: 1.5vmax;
+  padding: 1vmax 8vmax;
+  border-bottom: 1px solid #3d3c3c;
   display: flex;
+
   justify-content: center;
 }
 .box {
-  border-color: 2px red solid;
+  border: 2px red solid;
+}
+.new-post{
+  position: fixed;
+  bottom: 3vmax;
+  right: 3vmax;
+}
+.donation{
+  position: fixed;
+  right: 3vmax;
+  bottom:7vmax;
 }
 
 @media (max-width: 600px) {

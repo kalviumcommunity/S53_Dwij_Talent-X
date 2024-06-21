@@ -25,9 +25,11 @@ import gmail from "./../assets/gmail.png";
 import { FaWhatsapp } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import Footer from "./Footer";
+import Navbar from "./Navbar";
 export default function Home() {
   return (
     <div>
+      <Navbar/>
       <div className="bg">
         <div className="bg-img">
           <img src={background} className="img" />

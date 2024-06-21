@@ -33,7 +33,7 @@ export default function Navbar() {
           email: userEmail,
         };
         console.log(userdata);
-        await axios.post("http://localhost:6996/users", userdata);
+        await axios.post("https://talent-x.vercel.app/users", userdata);
       } catch (error) {
         console.log("Please sign in or check your network connection.");
       }
@@ -102,7 +102,10 @@ export default function Navbar() {
             </Button>
           </SignOutButton> */}
           <div className="user">
+          <Link to={"/profile"}>
+
             <div>{name}</div>
+          </Link>
             <div>
               <UserButton />
             </div>
