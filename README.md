@@ -32,7 +32,7 @@ Talent-X leverages the latest in technology to deliver a seamless and immersive 
 
 ## Deployment link
  - *Backend:* https://talent-x.vercel.app/
- - *Frontend:* NA
+ - *Frontend:* https://talentx-delta.vercel.app/
 
 ## Running the Project Locally
 
