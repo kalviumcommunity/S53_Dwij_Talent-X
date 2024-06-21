@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function LogIn() {
+export default function PostDetail() {
   return (
     <div>
-      Login component
+      
     </div>
   )
 }
